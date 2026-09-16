@@ -3798,6 +3798,12 @@ async function initPreviewPhysics() {
 
   _spawnPreviewTankBody();
 
+  // ── Recreate the floating-paper ambient decoration if it was disposed
+  // (e.g. by _launchGameNow() before a match starts) — without this,
+  // returnToMenu()'s call to window.initPreviewPhysics() left
+  // previewFloatingPaper permanently null, so it never appeared again.
+  _initFloatingPaper();
+
   // ── Rebuild plane preview physics too, if the plane preview is the
   // active idle/default preview right now. This function recreates
   // previewWorld from scratch every time it runs (e.g. once warehouse.glb
@@ -4084,6 +4090,12 @@ window._updateLightsForPreviewMode = _updateLightsForPreviewMode;
 // ── Floating paper scraps — ambient wind-blown decoration for the
 // preview scene. Centered on the tank spawn marker once it resolves.
 let previewFloatingPaper = null;
+// Remembers the floor-based scatter area (or fallback) resolved once in
+// loadWarehouse(), so _initFloatingPaper() can re-apply it whenever the
+// paper system needs to be recreated — e.g. after a match disposes it in
+// _launchGameNow(), since returnToMenu() only calls
+// window.initPreviewPhysics() afterward and never recreated this on its own.
+let _floorScatterInfo = null; // { center: THREE.Vector3, maxY: number, halfX?: number, halfZ?: number }
 
 function _initFloatingPaper() {
   if (previewFloatingPaper) return;
@@ -4096,6 +4108,18 @@ function _initFloatingPaper() {
     groundY: _defaultPosReady ? _defaultPosWorld.y - 1.62 : 0,
     texturePath: '/textures/paper_scrap.png',   // ← add this line
   });
+  // Re-apply whatever floor-based scatter area was already resolved
+  // earlier (loadWarehouse() only computes this once) — without this, a
+  // recreated paper system falls back to the tiny default 5x5 area
+  // centered on Default_Pos instead of the actual warehouse floor.
+  if (_floorScatterInfo) {
+    previewFloatingPaper.setCenter(
+      _floorScatterInfo.center,
+      _floorScatterInfo.maxY,
+      _floorScatterInfo.halfX,
+      _floorScatterInfo.halfZ
+    );
+  }
 }
 _initFloatingPaper();
 
@@ -4323,11 +4347,16 @@ function loadWarehouse() {
       const halfX = Math.max(0.5, (floorSize.x / 2) * MARGIN);
       const halfZ = Math.max(0.5, (floorSize.z / 2) * MARGIN);
 
+      // Remember this so the paper system can be re-centered correctly
+      // if it's ever recreated later (see _initFloatingPaper()).
+      _floorScatterInfo = { center: floorCenter.clone(), maxY: floorBox.max.y, halfX, halfZ };
+
       if (previewFloatingPaper) {
         previewFloatingPaper.setCenter(floorCenter, floorBox.max.y, halfX, halfZ);
       }
     } else {
       console.warn('[Warehouse] No "Floor" mesh(es) found in preview.glb — falling back to spawn-marker scatter.');
+      _floorScatterInfo = { center: _defaultPosWorld.clone(), maxY: _defaultPosWorld.y - 1.62 };
       if (previewFloatingPaper) previewFloatingPaper.setCenter(_defaultPosWorld, _defaultPosWorld.y - 1.62);
     }
 
