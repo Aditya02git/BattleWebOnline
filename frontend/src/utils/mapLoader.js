@@ -5,6 +5,12 @@
 
 let _mapsCache = null;
 
+// Statically discovered by Vite at build time — each entry's value is a
+// lazy loader function. This is what makes terrainData_2.js/_3.js etc.
+// actually get bundled and included in the production build, instead of
+// being an unresolvable runtime path.
+const terrainModules = import.meta.glob('/src/utils/terrainData*.js');
+
 export async function loadMapsData() {
   if (_mapsCache) return _mapsCache;
   const r = await fetch('/maps.json');
@@ -19,17 +25,29 @@ export async function getMapById(id) {
 }
 
 /**
- * Dynamically imports the terrainData module for the given map definition.
- * Returns the terrainData export from that module.
+ * Loads the terrainData module for the given map definition, using the
+ * glob-based module map above so it works both in dev and in a production
+ * build (where raw /src files are not deployed/servable).
  */
 export async function loadMapTerrain(mapDef) {
   const path = mapDef?.terrain?.dataPath;
+
   if (!path) {
-    // Fallback: static import of the default terrainData
     const mod = await import('./terrainData.js');
     return mod.terrainData;
   }
-  // Dynamic import — path must be a bare module specifier or absolute URL
-  const mod = await import(/* @vite-ignore */ path);
+
+  const loader = terrainModules[path];
+  if (!loader) {
+    console.error(
+      `[MapLoader] No bundled terrain module for path "${path}". ` +
+      `Known paths:`, Object.keys(terrainModules),
+    );
+    // Fallback so the game doesn't hard-crash — uses the default terrain.
+    const mod = await import('./terrainData.js');
+    return mod.terrainData;
+  }
+
+  const mod = await loader();
   return mod.terrainData;
 }
