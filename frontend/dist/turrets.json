@@ -1,0 +1,20 @@
+[
+  {
+    "id": "turret_mg_light",
+    "name": "Light MG Turret",
+    "modelPath": "/model/turret_1.glb",
+    "modelScale": 1.0,
+    "maxHealth": 180,
+    "damage": 14,
+    "fireRate": 0.12,
+    "range": 70,
+    "yawMin": -180,
+    "yawMax": 180,
+    "pitchMin": -5,
+    "pitchMax": 35,
+    "yawSpeed": 2.2,
+    "pitchSpeed": 1.6,
+    "activationTime": 5,
+    "respawnCooldown": 8
+  }
+]

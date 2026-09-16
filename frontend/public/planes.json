@@ -1,0 +1,199 @@
+[
+  {
+    "id": "spitfire",
+    "name": "Spitfire mk",
+    "subtitle": "BALANCED · AIR SUPERIORITY",
+    "description": "A balanced fighter with solid speed, maneuverability, and firepower — a safe pick for any pilot.",
+  
+    "modelPath": "/model/Spitfire.glb",
+    "skills": ["gunDamage", "mgFireRate", "planeMgReloadTime", "planeRepairTime", "rocketDamage", "rocketReload", "bombDamage", "bombBlastRadius", "maxSpeed", "boostMaxSpeed", "throttleAccel", "rollRate", "pitchRate", "stallSpeed", "planeArmour", "landingGearTransitionDuration"],
+    "config": {
+      "planeSound": "light",
+      "gunType": 3,
+      "fireSound": 5,
+      "fireRate": 0.1,
+      "totalMG": 4,
+      
+      "maxSpeed": 45,
+      "boostMaxSpeed": 50,
+      "armour": 100,
+      "maxHealth": 100,
+      "gunDamage": 20,
+      "bombDamage": 250,
+
+      "rocketDamage": 150,
+      "rocketSpeed": 100,
+      "rocketReload": 0.6,
+      "guidedMissile": true,
+      "rocketAuto": false,
+      
+      "modelScale": 1.3,
+      "damageEffect": {
+        "healthTriggerFraction": 0.65,
+        "minRemainingFraction": 0.95,
+        "deathMinRemainingFraction": 0.65,
+        "maxCutbackLength": 4.0,
+        "wingCutbackLength": 4.0,
+        "jagAmplitude": 0.5,
+        "jagFrequency": 1.4
+      },
+      "hullHalfExtents": { "x": 4.5, "y": 0.9, "z": 0.7 },
+      "colliderYOffset": 0.8,
+
+      "wingHalfExtents": { "x": 1.0, "y": 0.25, "z": 5.0 },
+      "wingColliderOffset": { "x": 0, "y": -0.5, "z": 0 },
+
+      "loadout": { "mgAmmo": 400, "rocketAmmo": 20, "bombAmmo": 6, "hispanoAmmo": 240 },
+
+      "lowHealthTurbulenceFraction": 0.75,
+      "turbulenceMaxIntensity": 0.15,
+      "turbulenceFrequency": 50,
+
+      "damageSmokeOffset": { "x": 0.0, "y": 0, "z": 0 },
+
+      "landingGearRotationsDeg": [[0, -84, 32], [0, 84, -32]],
+      "landingGearTransitionDuration": 1.2,
+      "wheelColliderHalfExtent": 0.2,
+      "scopeType": 0,
+      "scopeHudStyle": "old"
+    }
+  },
+  {
+    "id": "su_30",
+    "name": "Sukhoi SU-30",
+    "subtitle": "BALANCED · AIR SUPERIORITY",
+    "description": "A balanced fighter with solid speed, maneuverability, and firepower — a safe pick for any pilot.",
+  
+    "modelPath": "/model/s-30.glb",
+    "skills": ["gunDamage", "mgFireRate", "planeMgReloadTime", "planeRepairTime", "rocketDamage", "rocketReload", "bombDamage", "bombBlastRadius", "maxSpeed", "boostMaxSpeed", "throttleAccel", "rollRate", "pitchRate", "stallSpeed", "planeArmour", "landingGearTransitionDuration"],
+    "config": {
+      "throttleRampRate": 0.25,
+      "aerodynamicCondensation": true,
+      "propulsion": true,
+      "propulsionType": "blue",
+      "propulsionScale":0.4,
+      "planeSound": "modern_light",
+      "gunType": 3,
+      "fireSound": 5,
+      "fireRate": 0.02,
+      
+      "maxSpeed": 60,
+      "boostMaxSpeed": 70,
+      "armour": 100,
+      "maxHealth": 100,
+      "gunDamage": 20,
+      "bombDamage": 140,
+
+      "rocketDamage": 60,
+      "rocketSpeed": 100,
+      "rocketReload": 0.6,
+      "guidedMissile": true,
+      "rocketAuto": false,
+      "flareAmmo": 50,
+      
+      "modelScale": 1.6,
+      "damageEffect": {
+        "healthTriggerFraction": 0.65,
+        "minRemainingFraction": 0.95,
+        "deathMinRemainingFraction": 0.65,
+        "maxCutbackLength": 4.0,
+        "wingCutbackLength": 4.0,
+        "jagAmplitude": 0.5,
+        "jagFrequency": 1.4
+      },
+      "hullHalfExtents": { "x": 6.5, "y": 0.9, "z": 0.7 },
+      "colliderYOffset": 0.8,
+
+      "wingHalfExtents": { "x": 1.0, "y": 0.25, "z": 5.0 },
+      "wingColliderOffset": { "x": 2.5, "y": -0.25, "z": 0 },
+
+      "loadout": { "mgAmmo": 400, "rocketAmmo": 100, "bombAmmo": 4 },
+
+      "lowHealthTurbulenceFraction": 0.75,
+      "turbulenceMaxIntensity": 0.15,
+      "turbulenceFrequency": 50,
+
+      "damageSmokeOffset": { "x": 0.0, "y": 0, "z": 0 },
+
+      "landingGearRotationsDeg": [[-104.6,0,0],[15, -75, -111], [15, 75, 111]],
+      "landingGearTransitionDuration": 1.2,
+      "wheelColliderHalfExtent": 0.18,
+      "doorCloseRotationsDegL": [
+        [-35, 0, 0],
+        [0, 90, 0],
+        [0, 80, 0],
+        [0, 80, 0],
+        [0, 108, 0],
+        [0, 108, 0]
+      ],
+      "doorPhaseFractions": [0.3, 0.3],
+      "scopeType": 0,
+      "scopeHudStyle": "modern"
+    }
+  },
+  {
+    "id": "ju_88",
+    "name": "JUnkers JU 88",
+    "subtitle": "BALANCED · AIR SUPERIORITY",
+    "description": "A balanced fighter with solid speed, maneuverability, and firepower — a safe pick for any pilot.",
+
+    "modelPath": "/model/ju 88.glb",
+    "skills": ["gunDamage", "mgFireRate", "planeMgReloadTime", "planeRepairTime", "rocketDamage", "rocketReload", "bombDamage", "bombBlastRadius", "maxSpeed", "boostMaxSpeed", "throttleAccel", "rollRate", "pitchRate", "stallSpeed", "planeArmour", "landingGearTransitionDuration"],
+    "config": {
+    "planeSound": "light",
+    "gunType": 3,
+    "fireSound": 5,
+    "fireRate": 0.1,
+
+    "maxSpeed": 45,
+    "boostMaxSpeed": 50,
+    "armour": 100,
+    "maxHealth": 100,
+    "gunDamage": 20,
+    "bombDamage": 140,
+
+    "rocketDamage": 150,
+    "rocketSpeed": 100,
+    "rocketReload": 0.6,
+    "guidedMissile": true,
+    "rocketAuto": false,
+
+    "modelScale": 1.5,
+    "damageEffect": {
+    "healthTriggerFraction": 0.65,
+    "minRemainingFraction": 0.95,
+    "deathMinRemainingFraction": 0.65,
+    "maxCutbackLength": 5.85,
+    "wingCutbackLength": 8.0,
+    "jagAmplitude": 0.5,
+    "jagFrequency": 1.4
+    },
+    "hullHalfExtents": { "x": 6.5, "y": 0.6, "z": 0.7 },
+    "colliderYOffset": 0.8,
+
+    "wingHalfExtents": { "x": 1.0, "y": 0.25, "z": 8.0 },
+    "wingColliderOffset": { "x": 0, "y": 0.4, "z": 0 },
+
+    "loadout": { "mgAmmo": 400, "rocketAmmo": 100, "bombAmmo": 4 },
+
+    "lowHealthTurbulenceFraction": 0.75,
+    "turbulenceMaxIntensity": 0.15,
+    "turbulenceFrequency": 50,
+
+    "damageSmokeOffset": { "x": 0.0, "y": 0, "z": 0 },
+
+    "landingGearRotationsDeg": [[105, 0, 0], [105, 0, 0], [90, 0, 0]],
+    "landingGearTransitionDuration": 1.2,
+    "wheelColliderHalfExtent": 0.3,
+
+    "doorCloseRotationDegL": [0, 90, 0],
+    "doorCloseRotationDegR": [0, -90, 0],
+    "doorPhaseFractions": [0.3, 0.3],
+
+    "aiGunInverse": [true, true, true],
+    "aiGunTotalAmmo": 240,
+
+    "scopeType": 0
+    }
+  }
+]

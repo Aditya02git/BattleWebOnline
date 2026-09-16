@@ -1,0 +1,23 @@
+[
+  {
+    "id": "battleship_1",
+    "name": "Iron Duke",
+    "modelPath": "/model/yamato.glb",
+    "config": {
+        "modelRotY": 180,
+        "maxHealth": 2000,
+        "armour": 200,
+        "detectRange": 160,
+        "damage": 45,
+        "fireRate": 2.2,
+        "magSize": 300,
+        "reloadTime": 10,
+        "modelScale": 1.0,
+        "hullHalfExtents": { "x": 28, "y": 6, "z": 6 },
+        "turretMinPitch": -0.9,
+        "turretMaxPitch": 0.05,
+        "smokeIntervalMin": 0.5,
+        "smokeIntervalMax": 1.0
+    }
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "id": "reloadTime",
+    "name": "Rapid Loader",
+    "desc": "Reload time reduced by 50%.",
+    "cost": 150,
+    "effect": { "key": "reloadTime", "type": "multiply", "value": 0.1, "default": 3 }
+  },
+  {
+    "id": "shellSpeed",
+    "name": "Velocity Rounds",
+    "desc": "Shell speed increased by 10%.",
+    "cost": 150,
+    "effect": { "key": "shellSpeed", "type": "multiply", "value": 1.10, "default": 60 }
+  },
+  {
+    "id": "armour",
+    "name": "Reinforced Plating",
+    "desc": "Armour increased by 10%.",
+    "cost": 150,
+    "effect": { "key": "armour", "type": "multiply", "value": 1.10, "default": 100, "round": true }
+  },
+  {
+    "id": "damage",
+    "name": "High-Explosive Rounds",
+    "desc": "Main gun damage increased by 15%.",
+    "cost": 150,
+    "effect": { "key": "damage", "type": "multiply", "value": 2.0, "default": 100, "round": true }
+  },
+  {
+    "id": "mgDamage",
+    "name": "Hardened MG Ammo",
+    "desc": "Machine gun damage increased by 20%.",
+    "cost": 150,
+    "effect": { "key": "mgDamage", "type": "multiply", "value": 1.20, "default": 8, "round": true }
+  },
+  {
+    "id": "mgRange",
+    "name": "Extended MG Barrel",
+    "desc": "Machine gun range increased by 25%.",
+    "cost": 150,
+    "effect": { "key": "mgRange", "type": "multiply", "value": 5, "default": 80, "round": true }
+  },
+  {
+    "id": "turretTurnSpeed",
+    "name": "Turret Servo Upgrade",
+    "desc": "Turret turn speed increased by 20%.",
+    "cost": 150,
+    "effect": { "key": "turretTurnSpeed", "type": "multiply", "value": 1.20, "default": 1.0 }
+  },
+  {
+    "id": "barrelTurnSpeed",
+    "name": "Barrel Stabiliser",
+    "desc": "Barrel turn speed increased by 20%.",
+    "cost": 150,
+    "effect": { "key": "barrelTurnSpeed", "type": "multiply", "value": 1.20, "default": 1.0 }
+  },
+
+
+
+  
+  {
+  "id": "gunDamage",
+  "name": "Hardened Rounds",
+  "desc": "Main gun damage increased by 20%.",
+  "cost": 150,
+  "effect": { "key": "gunDamage", "type": "multiply", "value": 1.20, "default": 20, "round": true }
+},
+{
+  "id": "mgFireRate",
+  "name": "Overclocked Feed",
+  "desc": "Main gun fire rate increased by 20%.",
+  "cost": 150,
+  "effect": { "key": "mgFireRate", "type": "multiply", "value": 0.80, "default": 0.09 }
+},
+{
+  "id": "rocketDamage",
+  "name": "Warhead Upgrade",
+  "desc": "Rocket damage increased by 25%.",
+  "cost": 150,
+  "effect": { "key": "rocketDamage", "type": "multiply", "value": 2.0, "default": 60, "round": true }
+},
+{
+  "id": "rocketReload",
+  "name": "Rapid Rocket Pods",
+  "desc": "Rocket reload time reduced by 30%.",
+  "cost": 150,
+  "effect": { "key": "rocketReload", "type": "multiply", "value": 0.70, "default": 0.6 }
+},
+{
+  "id": "bombDamage",
+  "name": "Heavy Payload",
+  "desc": "Bomb damage increased by 20%.",
+  "cost": 150,
+  "effect": { "key": "bombDamage", "type": "multiply", "value": 1.20, "default": 140, "round": true }
+},
+{
+  "id": "bombBlastRadius",
+  "name": "Wide-Area Fusing",
+  "desc": "Bomb blast radius increased by 15%.",
+  "cost": 150,
+  "effect": { "key": "bombBlastRadius", "type": "multiply", "value": 1.15, "default": 14 }
+},
+{
+  "id": "maxSpeed",
+  "name": "Tuned Engine",
+  "desc": "Top speed increased by 10%.",
+  "effect": { "key": "maxSpeed", "type": "multiply", "value": 1.10, "default": 46 }
+},
+{
+  "id": "boostMaxSpeed",
+  "name": "Overboost Injector",
+  "desc": "Boost top speed increased by 12%.",
+  "cost": 150,
+  "effect": { "key": "boostMaxSpeed", "type": "multiply", "value": 1.12, "default": 60 }
+},
+{
+  "id": "throttleAccel",
+  "name": "Quick-Spool Turbo",
+  "desc": "Throttle response increased by 20%.",
+  "cost": 150,
+  "effect": { "key": "throttleAccel", "type": "multiply", "value": 1.20, "default": 14 }
+},
+{
+  "id": "rollRate",
+  "name": "Lightened Ailerons",
+  "desc": "Roll rate increased by 15%.",
+  "cost": 150,
+  "effect": { "key": "rollRate", "type": "multiply", "value": 1.15, "default": 2.6 }
+},
+{
+  "id": "pitchRate",
+  "name": "Trim Tab Tuning",
+  "desc": "Pitch rate increased by 15%.",
+  "cost": 150,
+  "effect": { "key": "pitchRate", "type": "multiply", "value": 1.15, "default": 1.15 }
+},
+{
+  "id": "stallSpeed",
+  "name": "Slotted Wing",
+  "desc": "Stall speed reduced by 15%, easing low-speed handling.",
+  "cost": 150,
+  "effect": { "key": "stallSpeed", "type": "multiply", "value": 0.85, "default": 9 }
+},
+{
+  "id": "planeArmour",
+  "name": "Cockpit Armour Plating",
+  "desc": "Armour increased by 20%.",
+  "cost": 150,
+  "effect": { "key": "armour", "type": "multiply", "value": 1.20, "default": 20, "round": true }
+},
+{
+  "id": "landingGearTransitionDuration",
+  "name": "Hydraulic Gear Actuators",
+  "desc": "Landing gear retracts/extends 30% faster.",
+  "cost": 150,
+  "effect": { "key": "landingGearTransitionDuration", "type": "multiply", "value": 0.70, "default": 1.2 }
+},
+
+
+{
+  "id": "mgReloadTime",
+  "name": "Quick-Change Belt",
+  "desc": "Machine gun reload time reduced by 30%.",
+  "cost": 150,
+  "effect": { "key": "mgReloadTime", "type": "multiply", "value": 0.70, "default": 2.5 }
+},
+{
+  "id": "repairTime",
+  "name": "Field Repair Kit",
+  "desc": "Repair time reduced by 30%.",
+  "cost": 150,
+  "effect": { "key": "repairTime", "type": "multiply", "value": 0.70, "default": 5 }
+},
+{
+  "id": "planeMgReloadTime",
+  "name": "Quick-Change Ammo Belt",
+  "desc": "Machine gun reload time reduced by 30%.",
+  "cost": 150,
+  "effect": { "key": "mgReloadTime", "type": "multiply", "value": 0.70, "default": 2.5 }
+},
+{
+  "id": "planeRepairTime",
+  "name": "Rapid Field Kit",
+  "desc": "Repair time reduced by 30%.",
+  "cost": 150,
+  "effect": { "key": "repairTime", "type": "multiply", "value": 0.70, "default": 5 }
+}
+]

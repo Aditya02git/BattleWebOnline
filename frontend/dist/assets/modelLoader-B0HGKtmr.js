@@ -1,0 +1,1 @@
+import{vn as e,y as t}from"./index-pvTFp6yX.js";var n=e({loadModel:()=>i}),r=new t;function i(e){return new Promise((t,n)=>{r.load(e,e=>t(e.scene),void 0,e=>n(e))})}export{n,i as t};

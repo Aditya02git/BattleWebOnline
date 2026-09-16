@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.hud-tr { top: 80px; right: 30px; text-align: right; }
+.hud-corner {
+  position: absolute;
+  font-family: var(--mono);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.hud-label {
+  font-size: 9px; letter-spacing: 3px; color: var(--text-dim);
+}
+
+.hud-value {
+  font-size: 14px; letter-spacing: 2px; color: var(--text);
+}
+.hud-green { color: var(--accent); }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3a1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6a8a30;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3a1a #0d0d0d;
+}
+
+#start-btn {
+  /* ADD these two — everything else stays the same */
+  position: relative;
+  overflow: hidden;
+}
+
+#start-btn::before,
+#start-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+/* wide soft beam */
+#start-btn::before {
+  background: rgba(255, 255, 255, 0.45);
+  width: 60px;
+  left: 0;
+  filter: blur(20px);
+  animation: shine1 5s ease-in-out infinite;
+}
+
+/* narrow sharp beam */
+#start-btn::after {
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  left: 30px;
+  filter: blur(4px);
+  animation: shine2 5s ease-in-out infinite;
+}
+.corner {
+  /* existing styles... */
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.btn-frame:hover .corner {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes shine1 {
+  0%          { opacity: 0.5; transform: translateX(-120px) skewX(-15deg); }
+  11.5%, 100% { opacity: 0.6; transform: translateX(320px)  skewX(-15deg); }
+}
+
+@keyframes shine2 {
+  0%          { opacity: 0;   transform: translateX(-120px) skewX(-15deg); }
+  11.5%, 100% { opacity: 1;   transform: translateX(320px)  skewX(-15deg); }
+}

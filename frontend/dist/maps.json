@@ -1,0 +1,632 @@
+[
+  {
+    "id": "old_farm",
+    "name": "Old Farm",
+    "worldHalf": 300,
+    "thumbnail": "/map_thumbs/verdant_valley.png",
+    "description": "Rolling green hills cut by a river valley. Mixed forests provide natural cover.",
+    "stats": {
+      "size": "800 x 800 m",
+      "terrain": "Hilly",
+      "cover": "Dense",
+      "water": true
+    },
+
+    "sky": {
+      "panorama":            "/farm_sky.png",
+      "highPanorama":        "/autumn_field_puresky_1k.png",
+      "fadeStartAltitude":   245,
+      "fadeEndAltitude":     250,
+      "toneMappingExposure": 1.1,
+      "clearColor":          "0x87ceeb"
+    },
+
+    "lighting": {
+        "ambient": {
+        "color":     "0xB8C7D9",
+        "intensity": 2.0
+      },
+      "directional": {
+        "color":     "0xFFF4D6",
+        "intensity": 4.0,
+        "position":  { "x": 0, "y": 10, "z": 20 }
+      }
+    },
+    
+    "terrain": {
+      "dataPath":      "/src/utils/terrainData.js",
+      "colorTex":      "/terrain_mat.jpg",
+      "normalTex":     "/Grass005_1K-PNG_NormalGL.png",
+      "maskTex":       "/terrain_texture.png",
+      "treeMaskTex":   "/forest_mask.png",
+      "normalRepeat":  80,
+      "furrowNormalTex":    "/furrow_normalmap.png",
+      "furrowMaskTex":      "/fence.png",
+      "furrowRoadOffset": 5,
+      "furrowNormalRepeat": 80,
+      "fenceRingOffset": -3.0,
+      "roadNormalTex": "/Grass_N.png",
+      "roadRepeat": 80
+    },
+
+    "team1TankSpawnPoints": [
+      { "x": 250, "y": 10, "z": 0 },
+      { "x": 230, "y": 10, "z": 0 },
+      { "x": 210, "y": 10, "z": 0 },
+      { "x": 190, "y": 10, "z": 0 }
+    ],
+
+    "team2TankSpawnPoints": [
+      { "x": -120, "y": 10, "z": -60 },
+      { "x": 30, "y": 10, "z": 200 },
+      { "x": -100, "y": 10, "z": -30 },
+      { "x": 60, "y": 10, "z": 170 }
+    ],
+
+    "team1PlaneSpawnPoints": [
+      { "x": 400, "y": 120, "z": 400 },
+      { "x": 400, "y": 120, "z": -400 }
+    ],
+
+    "team2PlaneSpawnPoints": [
+      { "x": -400, "y": 120, "z": 400 },
+      { "x": -400, "y": 120, "z": -400 }
+    ],
+
+    "team1AiSpawnPoints": [
+      { "x": 250, "y": 10, "z": 0 },
+      { "x": 230, "y": 10, "z": 0 },
+      { "x": 210, "y": 10, "z": 0 },
+      { "x": 190, "y": 10, "z": 0 }
+    ],
+
+    "team2AiSpawnPoints": [
+      { "x": -120, "z": -60 },
+      { "x": 30, "z": 200 },
+      { "x": -100, "z": -30 }
+    ],
+
+    "plane": {
+      "initialThrottle": 0.75,
+      "landingGearDown": false,
+      "autopilotOn": true
+    },
+
+    "capturePoints": [
+      { "id": "A", "x":  110, "z":  80 },
+      { "id": "B", "x": -150, "z": -100 },
+      { "id": "C", "x":   20, "z":  200 },
+      { "id": "D", "x":  200, "z": -180 },
+      { "id": "E", "x": -180, "z":  150 }
+    ],
+
+    "ammoPoints": [
+      { "x":  60,  "z":  40  },
+      { "x": -120, "z": -80  },
+      { "x":  180, "z":  160 }
+    ],
+
+    "houses": [
+      { "path": "/houses_2.glb" }
+    ],
+
+    "enemyCurvePath":   "/enemy_curve.json",
+    "enemyCurveClosed": true,
+
+    "birchCount": 300,
+    "firCount": 0,
+    "palmCount": 0,
+    "mapleCount": 300,
+
+    "bushCount": 200,
+
+    "grass": {
+      "grassCount": 95000,
+      "flowerCount": 5000
+    },
+
+    "water": {
+      "enabled": false,
+      "y": 7.4,
+      "color": "0x2a9ca6"
+    },
+
+    "fog": {
+      "color": "0xc2cbd0",
+      "density": 0.005
+    },
+
+    "dustColor": "0x40382b",
+    "trackDecalColor": "0x40382b",
+
+    "enemySpawnInterval": 2,
+    "friendlySpawnInterval": 2,
+    "enemyPlaneSpawnInterval": 20,
+    "friendlyPlaneSpawnInterval": 20,
+
+    "matchDuration": 300
+  },
+
+  {
+    "id": "lost_valley",
+    "name": "Lost Valley",
+    "worldHalf": 400,
+    "thumbnail": "/map_thumbs/verdant_valley.png",
+    "description": "Rolling green hills cut by a river valley. Mixed forests provide natural cover.",
+    "stats": {
+      "size": "800 x 800 m",
+      "terrain": "Hilly",
+      "cover": "Dense",
+      "water": true
+    },
+
+    "sky": {
+      "panorama":          "/overcast_smoky_horizon.png",
+      "toneMappingExposure": 1.1,
+      "clearColor":        "0x87ceeb",
+      "fadeStartAltitude":   245,
+      "fadeEndAltitude":     250
+    },
+
+    "lighting": {
+        "ambient": {
+        "color":     "0x70777c",
+        "intensity": 2.0
+      },
+      "directional": {
+        "color":     "0xaeb5ba",
+        "intensity": 3.0,
+        "position":  { "x": 0, "y": 10, "z": 20 }
+      }
+    },
+    
+    "terrain": {
+      "dataPath":      "/src/utils/terrainData_2.js",
+      "colorTex":      "/terrain_mat_2.png",
+      "normalTex":     "/Grass005_1K-PNG_NormalGL.png",
+      "maskTex":       "/terrain_texture_2.png",
+      "treeMaskTex":   "/fence_2.png",
+      "normalRepeat":  50,
+      "furrowEnabled":      false,
+      "furrowNormalTex":    "/furrow_normalmap.png",
+      "furrowMaskTex":      "/fence_2.png",
+      "furrowNormalRepeat": 80,
+      "roadNormalTex": "/sand_03_nor_gl_1k.png",
+      "roadRepeat": 80
+    },
+
+    "team1TankSpawnPoints": [
+      { "x": 200, "y": 10, "z": 100 },
+      { "x": 150, "y": 10, "z": 80 },
+      { "x": 170, "y": 10, "z": 60 },
+      { "x": 130, "y": 10, "z": 110 }
+    ],
+
+    "team2TankSpawnPoints": [
+      { "x": -120, "y": 10, "z": -60 },
+      { "x": 30, "y": 10, "z": 200 },
+      { "x": -100, "y": 10, "z": -30 },
+      { "x": 60, "y": 10, "z": 170 }
+    ],
+
+    "team1PlaneSpawnPoints": [
+      { "x": 200, "y": 120, "z": 100 },
+      { "x": 150, "y": 120, "z": 80 }
+    ],
+
+    "team2PlaneSpawnPoints": [
+      { "x": -120, "y": 120, "z": -60 },
+      { "x": 30, "y": 120, "z": 200 }
+    ],
+
+    "team1AiSpawnPoints": [
+      { "x": 210, "z": 110 },
+      { "x": 160, "z": 90 }
+    ],
+
+    "team2AiSpawnPoints": [
+      { "x": -120, "z": -60 },
+      { "x": 30, "z": 200 },
+      { "x": -100, "z": -30 }
+    ],
+
+    "team1Ships": [
+      { "shipId": "battleship_1", "x": 380, "z": 350, "rotY": 20 },
+      { "shipId": "battleship_1", "x": 420, "z": 300, "rotY": 20 }
+    ],
+    "team2Ships": [
+      { "shipId": "battleship_1", "x": -380, "z": -350, "rotY": 200 },
+      { "shipId": "battleship_1", "x": -420, "z": -300, "rotY": 200 }
+    ],
+
+    "plane": {
+      "initialThrottle": 0.5,
+      "landingGearDown": false,
+      "autopilotOn": true
+    },
+
+    "capturePoints": [
+      { "id": "A", "x":  110, "z":  80 },
+      { "id": "B", "x": -150, "z": -100 },
+      { "id": "C", "x":   20, "z":  200 },
+      { "id": "D", "x":  200, "z": -180 },
+      { "id": "E", "x": -180, "z":  150 }
+    ],
+
+    "ammoPoints": [
+      { "x":  60,  "z":  40  },
+      { "x": -120, "z": -80  },
+      { "x":  180, "z":  160 }
+    ],
+
+    "houses": [
+      { "path": "/houses2.glb" }
+    ],
+
+    "enemyCurvePath":   "/enemy_curve.json",
+    "enemyCurveClosed": true,
+
+    "birchCount": 150,
+    "firCount": 0,
+    "palmCount": 300,
+    "mapleCount": 150,
+
+    "grass": {
+      "grassCount": 100000,
+      "flowerCount": 500
+    },
+
+    "water": {
+      "enabled": true,
+      "y": 1.5,
+      "color": "0x124f3a"
+    },
+
+    "fog": {
+      "color": "0xb9b7b6",
+      "density": 0.002
+    },
+
+    "dustColor": "0x9B7D48",
+    "trackDecalColor": "0x9B7D48",
+
+    "enemySpawnInterval": 2,
+    "friendlySpawnInterval": 2,
+    "enemyPlaneSpawnInterval": 20,
+    "friendlyPlaneSpawnInterval": 20,
+
+    "matchDuration": 300
+  },
+
+  {
+    "id": "training",
+    "name": "Training Grounds",
+    "thumbnail": "/map_thumbs/verdant_valley.png",
+    "description": "Rolling green hills cut by a river valley. Mixed forests provide natural cover.",
+    "stats": {
+      "size": "800 x 800 m",
+      "terrain": "Hilly",
+      "cover": "Dense",
+      "water": true
+    },
+
+    "sky": {
+      "panorama":          "/overcast_smoky_horizon.png",
+      "toneMappingExposure": 2.0,
+      "clearColor":        "0x87ceeb"
+    },
+
+    "lighting": {
+        "ambient": {
+        "color":     "0x828282",
+        "intensity": 1.1
+      },
+      "directional": {
+        "color":     "0xDDE5E8",
+        "intensity": 5.0,
+        "position":  { "x": 0, "y": 10, "z": 20 }
+      }
+    },
+    
+    "terrain": {
+      "dataPath":      "/src/utils/terrainData_2.js",
+      "colorTex":      "/terrain_mat_2.png",
+      "normalTex":     "/Grass005_1K-PNG_NormalGL.png",
+      "maskTex":       "/terrain_texture_2.png",
+      "treeMaskTex":   "/fence_2.png",
+      "normalRepeat":  50,
+      "furrowEnabled":      false,
+      "furrowNormalTex":    "/furrow_normalmap.png",
+      "furrowMaskTex":      "/fence_2.png",
+      "furrowNormalRepeat": 80,
+      "roadNormalTex": "/sand_03_nor_gl_1k.png",
+      "roadRepeat": 80
+    },
+
+    "team1TankSpawnPoints": [
+      { "x": 200, "y": 10, "z": 100 },
+      { "x": 150, "y": 10, "z": 80 },
+      { "x": 170, "y": 10, "z": 60 },
+      { "x": 130, "y": 10, "z": 110 }
+    ],
+
+    "team2TankSpawnPoints": [
+      { "x": -120, "y": 10, "z": -60 },
+      { "x": 30, "y": 10, "z": 200 },
+      { "x": -100, "y": 10, "z": -30 },
+      { "x": 60, "y": 10, "z": 170 }
+    ],
+
+    "team1PlaneSpawnPoints": [
+      { "x": 200, "y": 120, "z": 100 },
+      { "x": 150, "y": 120, "z": 80 }
+    ],
+
+    "team2PlaneSpawnPoints": [
+      { "x": -120, "y": 120, "z": -60 },
+      { "x": 30, "y": 120, "z": 200 }
+    ],
+
+    "team1AiSpawnPoints": [
+      { "x": 210, "z": 110 },
+      { "x": 160, "z": 90 }
+    ],
+
+    "team2AiSpawnPoints": [
+      { "x": -120, "z": -60 },
+      { "x": 30, "z": 200 },
+      { "x": -100, "z": -30 }
+    ],
+
+    "plane": {
+      "initialThrottle": 0.5,
+      "landingGearDown": false,
+      "autopilotOn": true
+    },
+
+    "capturePoints": [
+      { "id": "A", "x":  110, "z":  80 },
+      { "id": "B", "x": -150, "z": -100 },
+      { "id": "C", "x":   20, "z":  200 },
+      { "id": "D", "x":  200, "z": -180 },
+      { "id": "E", "x": -180, "z":  150 }
+    ],
+
+    "ammoPoints": [
+      { "x":  60,  "z":  40  },
+      { "x": -120, "z": -80  },
+      { "x":  180, "z":  160 }
+    ],
+
+    "houses": [
+      { "path": "/houses2.glb" }
+    ],
+
+    "enemyCurvePath":   "/enemy_curve.json",
+    "enemyCurveClosed": true,
+
+    "birchCount": 100,
+    "firCount": 100,
+    "palmCount": 200,
+
+    "grass": {
+      "grassCount": 100000,
+      "flowerCount": 500
+    },
+
+    "water": {
+      "enabled": true,
+      "y": 1.5,
+      "color": "0x124f3a"
+    },
+
+    "fog": {
+      "color": "0xb9b7b6",
+      "density": 0.002
+    },
+
+    "dustColor": "0x9B7D48",
+    "trackDecalColor": "0x9B7D48",
+
+    "enemySpawnInterval": 2,
+    "friendlySpawnInterval": 2,
+    "enemyPlaneSpawnInterval": 20,
+    "friendlyPlaneSpawnInterval": 20,
+
+    "matchDuration": 900
+  },
+
+  {
+    "id": "dustland",
+    "name": "Dustland",
+    "thumbnail": "/map_thumbs/verdant_valley.png",
+    "description": "Rolling green hills cut by a river valley. Mixed forests provide natural cover.",
+    "stats": {
+      "size": "800 x 800 m",
+      "terrain": "Desert",
+      "cover": "Dense"
+    },
+
+    "sky": {
+      "panorama":          "/20250701_164506_0706.png",
+      "toneMappingExposure": 1.1,
+      "clearColor":        "0x87ceeb"
+    },
+
+    "lighting": {
+        "ambient": {
+        "color":     "0xc8d8f0",
+        "intensity": 1.5
+      },
+      "directional": {
+        "color":     "0xe8bd99",
+        "intensity": 20,
+        "position":  { "x": 0, "y": 10, "z": 20 }
+      }
+    },
+    
+    "terrain": {
+      "dataPath":      "/src/utils/terrainData_3.js",
+      "colorTex":      "/terrain_mat_3.png",
+      "normalTex":     "/sand_03_nor_gl_1k.png",
+      "maskTex":       "/terrain_texture_2.png",
+      "treeMaskTex":   "/forest_mask_2.png",
+      "normalRepeat":  70,
+      "furrowEnabled":      false,
+      "furrowNormalTex":    "/furrow_normalmap.png",
+      "furrowMaskTex":      "/fence_3.png",
+      "furrowNormalRepeat": 50
+    },
+
+    "team1TankSpawnPoints": [
+      { "x": 200, "y": 10, "z": 100 },
+      { "x": 150, "y": 10, "z": 80 },
+      { "x": 170, "y": 10, "z": 60 },
+      { "x": 130, "y": 10, "z": 110 }
+    ],
+
+    "team2TankSpawnPoints": [
+      { "x": -120, "y": 10, "z": -60 },
+      { "x": 30, "y": 10, "z": 200 },
+      { "x": -100, "y": 10, "z": -30 },
+      { "x": 60, "y": 10, "z": 170 }
+    ],
+
+    "team1PlaneSpawnPoints": [
+      { "x": 200, "y": 120, "z": 100 },
+      { "x": 150, "y": 120, "z": 80 }
+    ],
+
+    "team2PlaneSpawnPoints": [
+      { "x": -120, "y": 120, "z": -60 },
+      { "x": 30, "y": 120, "z": 200 }
+    ],
+
+    "team1AiSpawnPoints": [
+      { "x": 210, "z": 110 },
+      { "x": 160, "z": 90 }
+    ],
+
+    "team2AiSpawnPoints": [
+      { "x": -120, "z": -60 },
+      { "x": 30, "z": 200 },
+      { "x": -100, "z": -30 }
+    ],
+
+    "plane": {
+      "initialThrottle": 0.5,
+      "landingGearDown": false,
+      "autopilotOn": true
+    },
+
+    "capturePoints": [
+      { "id": "A", "x":  110, "z":  80 },
+      { "id": "B", "x": -150, "z": -100 },
+      { "id": "C", "x":   20, "z":  200 },
+      { "id": "D", "x":  200, "z": -180 },
+      { "id": "E", "x": -180, "z":  150 }
+    ],
+
+    "ammoPoints": [
+      { "x":  60,  "z":  40  },
+      { "x": -120, "z": -80  },
+      { "x":  180, "z":  160 }
+    ],
+
+    "houses": [
+      { "path": "/houses.glb" }
+    ],
+
+    "enemyCurvePath":   "/enemy_curve.json",
+    "enemyCurveClosed": true,
+
+    "birchCount": 0,
+    "firCount": 0,
+    "palmCount": 200,
+
+    "bushPositions": [
+      { "x": -360, "z": -360 },
+      { "x": -250, "z": -340 },
+      { "x": -120, "z": -370 },
+      { "x":   20, "z": -350 },
+      { "x":  150, "z": -330 },
+      { "x":  280, "z": -360 },
+      { "x":  370, "z": -280 },
+
+      { "x": -340, "z": -220 },
+      { "x": -210, "z": -180 },
+      { "x":  -70, "z": -230 },
+      { "x":   70, "z": -190 },
+      { "x":  210, "z": -220 },
+      { "x":  330, "z": -170 },
+
+      { "x": -380, "z":  -70 },
+      { "x": -260, "z":  -40 },
+      { "x": -120, "z":  -80 },
+      { "x":   10, "z":  -20 },
+      { "x":  150, "z":  -60 },
+      { "x":  280, "z":  -10 },
+      { "x":  380, "z":  -90 },
+
+      { "x": -340, "z":   90 },
+      { "x": -220, "z":   60 },
+      { "x":  -80, "z":  110 },
+      { "x":   60, "z":   70 },
+      { "x":  190, "z":  100 },
+      { "x":  320, "z":   40 },
+      { "x":  390, "z":  140 },
+
+      { "x": -370, "z":  230 },
+      { "x": -240, "z":  200 },
+      { "x": -100, "z":  250 },
+      { "x":   30, "z":  210 },
+      { "x":  170, "z":  260 },
+      { "x":  290, "z":  220 },
+      { "x":  360, "z":  310 },
+
+      { "x": -340, "z":  370 },
+      { "x": -200, "z":  340 },
+      { "x":  -60, "z":  380 },
+      { "x":   80, "z":  350 },
+      { "x":  220, "z":  370 },
+      { "x":  370, "z":  380 },
+
+      { "x": -310, "z": -300 },
+      { "x": -150, "z": -120 },
+      { "x":  -20, "z":  180 },
+      { "x":  120, "z": -260 },
+      { "x":  260, "z":  150 },
+      { "x": -280, "z":   300 },
+      { "x":  300, "z": -120 },
+      { "x": -390, "z":   380 },
+      { "x":    0, "z":     0 },
+      { "x":  390, "z": -390 }
+    ],
+
+    "grass": {
+      "grassCount": 100000,
+      "flowerCount": 500
+    },
+
+    "water": {
+      "enabled": false,
+      "y": 8.4,
+      "color": "0x124f3a"
+    },
+
+    "fog": {
+      "color": "0xC2B280",
+      "density": 0.0029
+    },
+
+    "dustColor": "0xC2B280",
+    "trackDecalColor": "0xC2B280",
+
+    "enemySpawnInterval": 2,
+    "friendlySpawnInterval": 2,
+    "enemyPlaneSpawnInterval": 20,
+    "friendlyPlaneSpawnInterval": 20,
+
+    "matchDuration": 180
+  }
+]
