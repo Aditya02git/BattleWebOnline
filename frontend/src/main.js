@@ -19,7 +19,7 @@ import {
 } from "./input.js";
 import { Tank } from "./tank.js";
 import { Plane } from "./plane.js";
-import { RapierDebugRenderer } from "./rapierDebugRenderer.js";
+import { RapierDebugRenderer } from "./RapierDebugRenderer.js";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 import Stats from "three/addons/libs/stats.module.js";
 import {
